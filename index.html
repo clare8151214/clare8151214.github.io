@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <title>Document</title>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <title>APP</title>
 </head>
 <body>
     <div class="div">
       <div class="div-2">
         <img
           loading="lazy"          
-          srcset="./image/background.png&width=100 100w, ./image/background.png&width=200 200w,./image/background.png&width=400 400w, ./image/background.png&width=800 800w, ./image/background.png&width=1200 1200w, ./image/background.png&width=1600 1600w, ./image/background.png"
+          srcset="./image/background.png?width=100 100w, ./image/background.png?width=200 200w ./image/background.png?width=400 400w, ./image/background.png?width=800 800w, ./image/background.png?width=1200 1200w, ./image/background.png?width=1600 1600w, ./image/background.png"
           class="img"
         />
         <div class="div-3">
@@ -110,7 +111,13 @@
         </div>
       </div>
     </div>
-    
+    <script>
+      liff.init({
+          liffId: '2003797183-RrywG97J'
+      }).then(() => {
+          console.log(liff.isLoggedIn());  // 判斷開啟此網頁的 LINE 使用者是否為登入狀態
+      });
+      </script>
 </body>
 </html>
 
