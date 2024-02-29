@@ -2,126 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-    <title>APP</title>
+    <title>Document</title>
+    <link href="./style.css" rel="stylesheet"> 
 </head>
 <body>
-    <div class="div">
-      
-      <div class="div-2">
-        <img
-          loading="lazy"          
-          srcset="./image/background.png?width=100 100w, ./image/background.png?width=200 200w ./image/background.png?width=400 400w, ./image/background.png?width=800 800w, ./image/background.png?width=1200 1200w, ./image/background.png?width=1600 1600w, ./image/background.png"
-          class="img"
-        />
-        <div class="div-3">
-          <div class="div-4">
-            <div class="div-5" id="name">1111</div>
-            <div class="div-6">0925001002</div>
-            <div class="div-7">
-              <div class="div-8">銀行後五碼 00456</div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
+    <div id="root">
+    <div class="container">
+        <div class="profile-header">
+            <img class="profile-photo" 
+            loading="lazy"          
+            srcset="./image/background.png?width=100 100w, ./image/background.png?width=200 200w ./image/background.png?width=400 400w, ./image/background.png?width=800 800w, ./image/background.png?width=1200 1200w, ./image/background.png?width=1600 1600w, ./image/background.png"
+            alt="Profile Background">
+          
 
-      
-
-      <div class="div-11">
-        
-        <div class="div-12">
-          <div class="div-13">
-            <div class="div-14">
-              <img
-                loading="lazy"
-                src="./image/house.svg"
-                class="img-3"
-              />
-              <div class="div-15">11月房租(第六期)</div>
+            <div class="bank-details">
+                <div class="div-4">
+                  <div class="name" id="name">羅大佑</div>
+                  <div class="phone_number" id="phone_number">0925001002</div>
+                  <div class="div-7">
+                    <div class="div-8">銀行後五碼 00456</div>                   
+                  </div>
+                </div>
             </div>
-            <div class="div-16">＄12600</div>
-            <div class="div-17">請於12/05前繳費</div>
-          </div>          
-          <img
-            loading="lazy"
-            src="./image/arrow.svg"
-            class="img-4"
-          />
+
         </div>
 
 
-
-        <div class="div-18">
-          <div class="div-19">
-            <div class="div-20">
-              <div class="div-21">
+        <div class="card">
+            <div class="rent-section">
+                <div class="div-13">
+                  <div class="div-14">
+                    <img
+                      loading="lazy"
+                      src="./image/house.svg"
+                      class="house_svg"
+                    />
+                    <div class="date_rent">11月房租(第六期)</div>
+                  </div>
+                  <div class="rent_amount">＄12600</div>
+                  <div class="grey-text">請於12/05前繳費</div>
+                </div>          
                 <img
                   loading="lazy"
-                  src="./image/housefix.svg"
-                  class="img-5"
+                  src="./image/arrow.svg"
+                  class="img-4"
                 />
-                <div class="div-22">維修</div>
-              </div>
-              <img
-                loading="lazy"
-                src="./image/arrow.svg"
-                class="img-6"
-              />
             </div>
-            <div class="div-23">目前無維修項目</div>
-          </div>
-          <div class="div-24">
-            <div class="div-25">
-              <div class="div-26">
-                <img
-                  loading="lazy"
-                  src="./image/painter.svg"
-                  class="img-7"
-                />
-                <div class="div-27">目前租約</div>
-              </div>
-              <img
-                loading="lazy"
-                src="./image/arrow.svg"
-                class="img-8"
-              />
+            
+
+
+            <div class="maintenance_card">
+                <div class="short_card">
+                  <div class="housefix_section">
+
+                        <div class="upper_text">
+                        <img
+                            loading="lazy"
+                            src="./image/housefix.svg"
+                            class="maintenance_img"
+                        />
+                        <div class="housefix_status">維修</div>
+                        </div>
+                        <img
+                        loading="lazy"
+                        src="./image/arrow.svg"
+                        class="maintenance_img"
+                        />
+
+                  </div>
+                  <div class="normal_text">目前無維修項目</div>
+                </div>
+
+                <div class="short_card">
+                    <div class="contract_section">
+                        <div class="upper_text">
+                            <img
+                            loading="lazy"
+                            src="./image/painter.svg"
+                            class="maintenance_img"
+                            />
+                            <div class="contract_status">目前租約</div>
+                        </div>
+                        <img
+                            loading="lazy"
+                            src="./image/arrow.svg"
+                            class="maintenance_img"
+                        />
+                    </div>
+                  <div class="normal_text">租約狀態</div>
+                </div>
             </div>
-            <div class="div-28">租約狀態</div>
-          </div>
+            
+
+            <div class="maintenance_card">
+                <div class="short_card">
+                  <div class="credit-score-section">
+
+                        <div class="upper_text">
+                        <img
+                            loading="lazy"
+                            src="./image/star.svg"
+                            class="maintenance_img"
+                        />
+                        <div class="credit-score">信用評分</div>
+                        </div>
+                        <img
+                        loading="lazy"
+                        src="./image/arrow.svg"
+                        class="maintenance_img"
+                        />
+
+                  </div>
+                  
+                  
+                  <div class="normal_text"> <div class="score_text">9.5</div> 優良</div>
+                </div>
+
+                <div class="short_card">
+                                    
+                </div>
+            </div>
+
         </div>
-
-
-        <div class="div-29">
-          <div class="div-30">
-            <div class="div-31">
-              <img
-                loading="lazy"
-                src="./image/star.svg"
-                class="img-9"
-              />
-              <div class="div-32">信用評分</div>
-            </div>
-            <img
-              loading="lazy"
-                src="./image/arrow.svg"
-              class="img-10"
-            />
-          </div>
-          <div class="div-33">
-            <div class="div-34">9.8</div>
-            <div class="div-35">優良</div>
-          </div>
-        </div>
-
-      </div>
 
     </div>
-    
+</div>
 </body>
 </html>
-
-

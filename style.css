@@ -1,294 +1,223 @@
-<style>
-  .div {
-    background-color: var(--b5, #f4f4f4);
-    display: flex;
-    max-width: 480px;
-    width: 100%;
-    flex-direction: column;
-    white-space: nowrap;
-    margin: 0 auto;
-    padding: 44px 0;
-  }
-  .div-2 {
-    display: flex;
-    flex-direction: column; 
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    aspect-ratio: 2.1;
-    width: 100%;
-    padding-top: 50px;
-    font-size: 15px;
-    color: var(--w100, #fff);
-    font-weight: 400;
-  }
-  .img {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  .div-3 {
-    position: relative;
-    border-radius: 0px 0px 20px 0px;
-    background: linear-gradient(
-      86deg,
-      rgba(157, 123, 80, 0.5) 11.26%,
-      rgba(132, 108, 77, 0.5) 99.6%
-    );
-    box-shadow: 0px 1px 4px 0px rgba(34, 34, 34, 0.1);
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    padding: 34px 0;
-  }
-  .div-4 {
-    display: flex;
-    width: 100%;
-    padding-left: 29px;
-    flex-direction: column;
-  }
-  .div-5 {
-    letter-spacing: 0.85px;
-    font: 17px PingFang TC, sans-serif;
-  }
-  .div-6 {
-    font-family: PingFang TC, sans-serif;
-  }
-  .div-7 {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-  }
-  .div-8 {
-    font-family: PingFang TC, sans-serif;
-    flex-grow: 1;
-    flex-basis: auto;
-  }
-  .div-9 {
-    display: flex;
-    padding-right: 8px;
-    justify-content: space-between;
-    gap: 4px;
-  }
-  .div-10 {
-    font-family: PingFang TC, sans-serif;
-    flex-grow: 1;
-    flex-basis: auto;
-  }
-  .img-2 {
-    aspect-ratio: 0.17;
-    object-fit: auto;
-    object-position: center;
-    width: 4px;
-  }
-  .div-11 {
-    display: flex;
-    margin-top: 12px;
-    width: 100%;
-    flex-direction: column;
-    padding: 0 24px;
-  }
-  .div-12 {
-    justify-content: space-between;
-    border-radius: 5px;
-    border: 1px solid var(--b10, #e9e9e9);
-    background-color: var(--w100, #fff);
-    display: flex;
-    gap: 20px;
-    font-weight: 400;
-    padding: 8px 16px;
-  }
-  .div-29 {
-    border-radius: 5px;
-    border: 1px solid var(--b10, #e9e9e9);
-    background-color: var(--w100, #fff);
-    display: flex;
-    margin-top: 12px; 
-    /* width: 100%; */
-    flex-direction: column;
-    padding: 8px 16px;
-  }
+       
+        .container { /* div */
+          background-color: var(--b5, #f4f4f4);
+          display: flex;
+          max-width: 480px;
+          width: 100%;
+          flex-direction: column;
+          white-space: nowrap;
+          margin: 0 auto;
+          padding: 44px 0;
+          
+        }
+
+        .profile-header { /* div-2 */
+            display: flex;
+            flex-direction: column; 
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            aspect-ratio: 2.1;
+            width: 100%;
+            padding-top: 50px;
+            font-size: 15px;
+            color: var(--w100, #fff);
+            font-weight: 400;
+            
+        }
 
 
-  .div-13 {
-    display: flex;
-    flex-direction: column;
-  }
-  .div-14 {
-    display: flex;
-    justify-content: space-between;
-    gap: 4px;
-    font-size: 15px;
-    color: var(--b100, #222);
-  }
-  .img-3 {
-    aspect-ratio: 1;
-    object-fit: auto;
-    object-position: center;
-    width: 24px;
-  }
-  .div-15 {
-    font-family: PingFang TC, sans-serif;
-    flex-grow: 1;
-  }
-  .div-16 {
-    color: var(--R500, #eb4d3d);
-    letter-spacing: 0.85px;
-    margin-top: 8px;
-    font: 500 17px PingFang TC, sans-serif;
-  }
-  .div-17 {
-    color: var(--b50, #909090);
-    font: 14px PingFang TC, sans-serif;
-  }
-  .img-4 {
-    aspect-ratio: 1;
-    object-fit: auto;
-    object-position: center;
-    width: 24px;
-    margin: auto 0;
-  }
-  .div-18 {
-    display: flex;
-    margin-top: 12px;
-    justify-content: space-between;
-    gap: 8px;
-    font-size: 15px;
-    color: var(--b100, #222);
-    font-weight: 400;
-  }
-  .div-19 {
-    border-radius: 5px;
-    border: 1px solid var(--b10, #e9e9e9);
-    background-color: var(--w100, #fff);
-    display: flex;
-    flex-grow: 1;
-    flex-basis: 0%;
-    flex-direction: column;
-    padding: 8px 16px;
-  }
-  .div-20 {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  .div-21 {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-  }
-  .img-5 {
-    aspect-ratio: 1;
-    object-fit: auto;
-    object-position: center;
-    width: 24px;
-  }
-  .div-22 {
-    font-family: PingFang TC, sans-serif;
-  }
-  .img-6 {
-    aspect-ratio: 0.88;
-    object-fit: auto;
-    object-position: center;
-    width: 21px;
-  }
-  .div-23 {
-    font-family: PingFang TC, sans-serif;
-    margin-top: 37px;
-  }
-  .div-24 {
-    border-radius: 5px;
-    border: 1px solid var(--b10, #e9e9e9);
-    background-color: var(--w100, #fff);
-    display: flex;
-    flex-grow: 1;
-    flex-basis: 0%;
-    flex-direction: column;
-    padding: 8px 16px;
-  }
-  .div-25 {
-    display: flex;
-    padding-right: 7px;
-    justify-content: space-between;
-    gap: 12px;
-  }
-  .div-26 {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-  }
-  .img-7 {
-    aspect-ratio: 1;
-    object-fit: auto;
-    object-position: center;
-    width: 24px;
-  }
-  .div-27 {
-    font-family: PingFang TC, sans-serif;
-    flex-grow: 1;
-  }
-  .img-8 {
-    aspect-ratio: 1;
-    object-fit: auto;
-    object-position: center;
-    width: 24px;
-  }
-  .div-28 {
-    font-family: PingFang TC, sans-serif;
-    margin-top: 37px;
-  }
-  
-  .div-30 {
-    justify-content: space-between;
-    display: flex;
-    padding-right: 29px;
-    gap: 19px;
-    font-size: 15px;
-    color: var(--b100, #222);
-    font-weight: 400;
-  }
-  .div-31 {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-  }
-  .img-9 {
-    aspect-ratio: 1;
-    object-fit: auto;
-    object-position: center;
-    width: 24px;
-  }
-  .div-32 {
-    font-family: PingFang TC, sans-serif;
-    flex-grow: 1;
-    flex-basis: auto;
-  }
-  .img-10 {
-    aspect-ratio: 1;
-    object-fit: auto;
-    object-position: center;
-    width: 24px;
-  }
-  .div-33 {
-    display: flex;
-    margin-top: 38px;
-    justify-content: space-between;
-    gap: 4px;
-  }
-  .div-34 {
-    color: var(--G500, #67cc72);
-    letter-spacing: 0.85px;
-    font: 500 17px PingFang TC, sans-serif;
-  }
-  .div-35 {
-    color: var(--b100, #222);
-    flex-grow: 1;
-    flex-basis: auto;
-    font: 400 15px PingFang TC, sans-serif;
-  }
-</style>
+        .profile-photo { /* img */
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 20px 0 20px 0;
+            
+        }
+        
+        .bank-details { /* div-3 */
+            position: relative;
+            border-radius: 0px 0px 20px 0px;
+            background: linear-gradient(
+                86deg,
+                rgba(157, 123, 80, 0.5) 11.26%,
+                rgba(132, 108, 77, 0.5) 99.6%
+            );
+            box-shadow: 0px 1px 4px 0px rgba(34, 34, 34, 0.1);
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            padding: 34px 0;
+        }
+
+        .div-4 {
+            display: flex;
+            width: 100%;
+            padding-left: 29px;
+            flex-direction: column;
+        }
+        .name { /* div-5 */
+            letter-spacing: 0.85px;
+            font: 17px PingFang TC, sans-serif;
+        }
+        .phone_number { /* div-6 */
+            font-family: PingFang TC, sans-serif;
+        }
+
+
+        
+
+        .div-7 {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+        }
+        .div-8 {
+            font-family: PingFang TC, sans-serif;
+            flex-grow: 1;
+            flex-basis: auto;
+        }
+
+
+        .card { /* div-11 */
+            display: flex;
+            margin-top: 12px;
+            width: 100%;
+            flex-direction: column;
+            /* padding: 0 24px; */
+        }
+
+
+
+        .rent-section{  /*.div-12*/
+            justify-content: space-between;
+            border-radius: 5px;
+            border: 1px solid var(--b10, #e9e9e9);
+            background-color: var(--w100, #fff);
+            display: flex;
+            gap: 20px;
+            font-weight: 400;
+            padding: 8px 16px;
+        }
+        
+
+        .img-3, .house_svg{
+            aspect-ratio: 1;
+            object-fit: auto;
+            object-position: center;
+            width: 24px;
+        }
+
+        .img-4, .arrow_svg{
+            aspect-ratio: 1;
+            object-fit: auto;
+            object-position: center;
+            width: 24px;
+            margin: auto 0;
+        }
+
+
+        .div-13 {
+            display: flex;
+            flex-direction: column;
+        }
+        .div-14 {
+            display: flex;
+            justify-content: space-between;
+            gap: 4px;
+            font-size: 15px;
+            color: var(--b100, #222);
+        }
+
+        .div-15, .date_rent{
+            font-family: PingFang TC, sans-serif;
+            flex-grow: 1;
+        }
+
+        .rent_amount{ /*div-16*/
+            color: var(--R500, #eb4d3d);
+            letter-spacing: 0.85px;
+            margin-top: 8px;
+            font: 500 17px PingFang TC, sans-serif;
+        }
+
+        .div-17, .grey-text {
+            color: var(--b50, #909090);
+            font: 14px PingFang TC, sans-serif;
+        }
+
+
+
+        .maintenance_card { /* .div-18, */
+            display: flex;
+            margin-top: 12px;
+            justify-content: space-between;
+            gap: 8px;
+            font-size: 15px;
+            color: var(--b100, #222);
+            font-weight: 400;
+        }
+
+
+        
+       
+        .div-24, .div-19 , .short_card {
+            border-radius: 5px;
+            border: 1px solid var(--b10, #e9e9e9);
+            background-color: var(--w100, #fff);
+            display: flex;
+            flex-grow: 1;
+            flex-basis: 0%;
+            flex-direction: column;
+            padding: 8px 16px;
+        }
+        .div-25 , .div-20 , .housefix_section, .contract_section, .credit-score-section{
+            display: flex;
+            padding-right: 7px;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .div-26, .div-21, .upper_text {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+        }
+        
+        .housefix_status, .contract_status, .credit-score { /*.div-27, .div-22,*/
+            font-family: PingFang TC, sans-serif;
+            flex-grow: 1;
+        }
+
+        .maintenance_img { /*img-5、6、7、8*/
+            aspect-ratio: 1;
+            object-fit: auto;
+            object-position: center;
+            width: 24px;
+        }
+
+        .normal_text { /* 23 28*/
+            font-family: PingFang TC, sans-serif;
+            margin-top: 37px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+
+        .score_text {
+            color: var(--G500, #67cc72);
+            margin-right: 5px;
+            /* letter-spacing: 0.85px;
+            font: 500 17px PingFang TC, sans-serif; */
+        }
+
+        .div-35 {
+            color: var(--b100, #222);
+            flex-grow: 1;
+            flex-basis: auto;
+            font: 400 15px PingFang TC, sans-serif;
+        }
+     

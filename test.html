@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>       
-        .container {
+        .container { /* div */
           background-color: var(--b5, #f4f4f4);
           display: flex;
           max-width: 480px;
@@ -14,92 +14,343 @@
           white-space: nowrap;
           margin: 0 auto;
           padding: 44px 0;
+          
         }
-        .profile-header {
-            display: flex; 
+
+        .profile-header { /* div-2 */
+            display: flex;
             flex-direction: column; 
-            align-items: center; 
-            gap: 20px;
-            padding-top: 50px; 
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            aspect-ratio: 2.1;
+            width: 100%;
+            padding-top: 50px;
+            font-size: 15px;
+            color: var(--w100, #fff);
+            font-weight: 400;
+            
         }
-        .profile-photo {
-            width: 100%; 
-            height: auto; 
+
+
+        .profile-photo { /* img */
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
             border-radius: 20px 0 20px 0;
+            
         }
-        .info-section, .rent-section, .maintenance-section, .contract-section, .credit-score-section {
-            background-color: #fff; 
-            border-radius: 5px;
-            margin-top: 20px; 
-            padding: 16px; 
-            box-shadow: 0px 1px 4px rgba(34, 34, 34, 0.1);
+        
+        .bank-details { /* div-3 */
+            position: relative;
+            border-radius: 0px 0px 20px 0px;
+            background: linear-gradient(
+                86deg,
+                rgba(157, 123, 80, 0.5) 11.26%,
+                rgba(132, 108, 77, 0.5) 99.6%
+            );
+            box-shadow: 0px 1px 4px 0px rgba(34, 34, 34, 0.1);
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            padding: 34px 0;
         }
-        .row {
-            display: flex; 
+
+        .div-4 {
+            display: flex;
+            width: 100%;
+            padding-left: 29px;
+            flex-direction: column;
+        }
+        .name { /* div-5 */
+            letter-spacing: 0.85px;
+            font: 17px PingFang TC, sans-serif;
+        }
+        .phone_number { /* div-6 */
+            font-family: PingFang TC, sans-serif;
+        }
+
+
+        
+
+        .div-7 {
+            display: flex;
             justify-content: space-between;
+            gap: 8px;
+        }
+        .div-8 {
+            font-family: PingFang TC, sans-serif;
+            flex-grow: 1;
+            flex-basis: auto;
+        }
+
+
+        .card { /* div-11 */
+            display: flex;
+            margin-top: 12px;
+            width: 100%;
+            flex-direction: column;
+            /* padding: 0 24px; */
+        }
+
+
+
+        .rent-section{  /*.div-12*/
+            justify-content: space-between;
+            border-radius: 5px;
+            border: 1px solid var(--b10, #e9e9e9);
+            background-color: var(--w100, #fff);
+            display: flex;
+            gap: 20px;
+            font-weight: 400;
+            padding: 8px 16px;
+        }
+        
+
+        .img-3, .house_svg{
+            aspect-ratio: 1;
+            object-fit: auto;
+            object-position: center;
+            width: 24px;
+        }
+
+        .img-4, .arrow_svg{
+            aspect-ratio: 1;
+            object-fit: auto;
+            object-position: center;
+            width: 24px;
+            margin: auto 0;
+        }
+
+
+        .div-13 {
+            display: flex;
+            flex-direction: column;
+        }
+        .div-14 {
+            display: flex;
+            justify-content: space-between;
+            gap: 4px;
+            font-size: 15px;
+            color: var(--b100, #222);
+        }
+
+        .div-15, .date_rent{
+            font-family: PingFang TC, sans-serif;
+            flex-grow: 1;
+        }
+
+        .rent_amount{ /*div-16*/
+            color: var(--R500, #eb4d3d);
+            letter-spacing: 0.85px;
+            margin-top: 8px;
+            font: 500 17px PingFang TC, sans-serif;
+        }
+
+        .div-17, .grey-text {
+            color: var(--b50, #909090);
+            font: 14px PingFang TC, sans-serif;
+        }
+
+
+
+        .maintenance_card { /* .div-18, */
+            display: flex;
+            margin-top: 12px;
+            justify-content: space-between;
+            gap: 8px;
+            font-size: 15px;
+            color: var(--b100, #222);
+            font-weight: 400;
+        }
+
+
+        
+       
+        .div-24, .div-19 , .short_card {
+            border-radius: 5px;
+            border: 1px solid var(--b10, #e9e9e9);
+            background-color: var(--w100, #fff);
+            display: flex;
+            flex-grow: 1;
+            flex-basis: 0%;
+            flex-direction: column;
+            padding: 8px 16px;
+        }
+        .div-25 , .div-20 , .housefix_section, .contract_section, .credit-score-section{
+            display: flex;
+            padding-right: 7px;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .div-26, .div-21, .upper_text {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+        }
+        
+        .housefix_status, .contract_status, .credit-score { /*.div-27, .div-22,*/
+            font-family: PingFang TC, sans-serif;
+            flex-grow: 1;
+        }
+
+        .maintenance_img { /*img-5、6、7、8*/
+            aspect-ratio: 1;
+            object-fit: auto;
+            object-position: center;
+            width: 24px;
+        }
+
+        .normal_text { /* 23 28*/
+            font-family: PingFang TC, sans-serif;
+            margin-top: 37px;
+            white-space: nowrap;
+            display: flex;
             align-items: center;
         }
-        .bank-details, .rent-details, .no-maintenance, .contract-status, .credit-score-valuation {
-            padding: 8px 0;
+
+        .score_text {
+            color: var(--G500, #67cc72);
+            margin-right: 5px;
+            /* letter-spacing: 0.85px;
+            font: 500 17px PingFang TC, sans-serif; */
         }
-        .bold-text {
-            font-weight: bold;
+
+        .div-35 {
+            color: var(--b100, #222);
+            flex-grow: 1;
+            flex-basis: auto;
+            font: 400 15px PingFang TC, sans-serif;
         }
-        .red-text {
-            color: #eb4d3d;
-        }
-        .green-text {
-            color: #67cc72;
-        }
-        .grey-text {
-            color: #909090;
-        }
-        .visually-hidden {
-            position: absolute; 
-            width: 1px; 
-            height: 1px; 
-            margin: -1px; 
-            padding: 0;
-            overflow: hidden; 
-            clip: rect(0,0,0,0); 
-            border: 0;
-        }
+     
+
     </style>
 </head>
 <body>
+    <div id="root">
     <div class="container">
-        <header class="profile-header">
-            <img class="profile-photo" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8c21ce4777e6969e2e537f60a9ed724606bc250d59a257d0abcf479e502a1555?apiKey=bfc4e1f6ccd94a29849746508f52afcb&" alt="Profile Background">
-            <h4>葉大雄</h4>
-            <p>0925001002</p>
-            <div class="row bank-details">
-                <span>銀行後五碼</span>
-                <span>04556</span>
-            </div>
-        </header>
-        <section class="rent-section">
-            <div class="row rent-details">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7efd83484435e355443d23c998b90a65c3f4f8958ca9359d6c32bf39882d025c?apiKey=bfc4e1f6ccd94a29849746508f52afcb&" alt="" class="rent-icon">
-                <span>11月房租(第六期)</span>
-                <span class="red-text">＄12600</span>
-                <span class="grey-text">請於12/05前繳費</span>
-            </div>
-        </section>
-        <section class="maintenance-section">
-            <p class="no-maintenance">目前無維修項目</p>
-        </section>
-        <section class="contract-section">
-            <p class="contract-status bold-text">租約狀態</p>
-        </section>
-        <section class="credit-score-section">
-            <div class="row">
-                <span>信用評分</span>
-                <div class="credit-score-valuation">
-                    <span class="bold-text green-text">9.8</span> 
-                    <span>優良</span>
+        <div class="profile-header">
+            <img class="profile-photo" 
+            loading="lazy"          
+            srcset="./image/background.png?width=100 100w, ./image/background.png?width=200 200w ./image/background.png?width=400 400w, ./image/background.png?width=800 800w, ./image/background.png?width=1200 1200w, ./image/background.png?width=1600 1600w, ./image/background.png"
+            alt="Profile Background">
+          
+
+            <div class="bank-details">
+                <div class="div-4">
+                  <div class="name" id="name">羅大佑</div>
+                  <div class="phone_number" id="phone_number">0925001002</div>
+                  <div class="div-7">
+                    <div class="div-8">銀行後五碼 00456</div>                   
+                  </div>
                 </div>
             </div>
-        </section>
+
+        </div>
+
+
+        <div class="card">
+            <div class="rent-section">
+                <div class="div-13">
+                  <div class="div-14">
+                    <img
+                      loading="lazy"
+                      src="./image/house.svg"
+                      class="house_svg"
+                    />
+                    <div class="date_rent">11月房租(第六期)</div>
+                  </div>
+                  <div class="rent_amount">＄12600</div>
+                  <div class="grey-text">請於12/05前繳費</div>
+                </div>          
+                <img
+                  loading="lazy"
+                  src="./image/arrow.svg"
+                  class="img-4"
+                />
+            </div>
+            
+
+
+            <div class="maintenance_card">
+                <div class="short_card">
+                  <div class="housefix_section">
+
+                        <div class="upper_text">
+                        <img
+                            loading="lazy"
+                            src="./image/housefix.svg"
+                            class="maintenance_img"
+                        />
+                        <div class="housefix_status">維修</div>
+                        </div>
+                        <img
+                        loading="lazy"
+                        src="./image/arrow.svg"
+                        class="maintenance_img"
+                        />
+
+                  </div>
+                  <div class="normal_text">目前無維修項目</div>
+                </div>
+
+                <div class="short_card">
+                    <div class="contract_section">
+                        <div class="upper_text">
+                            <img
+                            loading="lazy"
+                            src="./image/painter.svg"
+                            class="maintenance_img"
+                            />
+                            <div class="contract_status">目前租約</div>
+                        </div>
+                        <img
+                            loading="lazy"
+                            src="./image/arrow.svg"
+                            class="maintenance_img"
+                        />
+                    </div>
+                  <div class="normal_text">租約狀態</div>
+                </div>
+            </div>
+            
+
+            <div class="maintenance_card">
+                <div class="short_card">
+                  <div class="credit-score-section">
+
+                        <div class="upper_text">
+                        <img
+                            loading="lazy"
+                            src="./image/star.svg"
+                            class="maintenance_img"
+                        />
+                        <div class="credit-score">信用評分</div>
+                        </div>
+                        <img
+                        loading="lazy"
+                        src="./image/arrow.svg"
+                        class="maintenance_img"
+                        />
+
+                  </div>
+                  
+                  
+                  <div class="normal_text"> <div class="score_text">9.5</div> 優良</div>
+                </div>
+
+                <div class="short_card">
+                                    
+                </div>
+            </div>
+
+        </div>
+
     </div>
+</div>
 </body>
 </html>
